@@ -1501,6 +1501,70 @@ body{background:#E7E9ED;min-height:100vh}
 .pay1 .ph>.ms,.pay2 .ph>.ms,.pay1 .btn-light .ms,.sheet-l .btn .ms{flex:none}
 .pay1 .btn-light,.sheet-l .btn{display:flex;gap:6px;justify-content:center;align-items:center}
 .pay2 .btn{white-space:nowrap;font-size:13.5px}
+/* tap cue */
+.cuepos{position:relative}
+.cue{position:absolute;left:50%;top:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;pointer-events:none;z-index:5;background:rgba(61,142,247,.22);box-shadow:0 0 0 2px rgba(61,142,247,.45);animation:cuep 1.8s ease-out infinite}
+.cue::after{content:"";position:absolute;inset:15px;border-radius:50%;background:rgba(61,142,247,.55)}
+@keyframes cuep{0%{transform:scale(.6);opacity:.9}70%{transform:scale(1.35);opacity:.25}100%{transform:scale(1.5);opacity:0}}
+.wa .cue,.lockscr .cue{background:rgba(255,255,255,.18);box-shadow:0 0 0 2px rgba(255,255,255,.45)}.wa .cue::after,.lockscr .cue::after{background:rgba(255,255,255,.55)}
+.fits span#bftx{min-height:32px;display:flex;align-items:center}
+/* final home */
+.hm{background:#F2F4F7;position:relative}
+.hm-top{display:flex;gap:10px;align-items:center;padding:4px 16px 12px;background:#0B2C5F;color:#fff}
+.hm .sbar{background:#0B2C5F}
+.hm-top .lg{width:34px;height:34px;border-radius:9px}
+.hm-top .hi{flex:1;display:grid;line-height:1.15}.hm-top small{font-size:11px;color:#BFD6F5}.hm-top b{font-size:16px}
+.hm-scroll{flex:1;overflow-y:auto;scrollbar-width:none;display:grid;gap:14px;align-content:start;padding:0 14px 100px;background:linear-gradient(#0B2C5F 0 40px,#F2F4F7 40px)}
+.hm-scroll::-webkit-scrollbar{display:none}
+.hm-srch{background:#fff;border-radius:12px;padding:11px 12px;font-size:13px;color:var(--ink-3);display:flex;gap:6px;align-items:center;box-shadow:var(--e1)}
+.hm-grid{background:#fff;border-radius:16px;padding:12px 6px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px 4px;box-shadow:var(--e1)}
+.hm-grid div{display:grid;justify-items:center;gap:4px;font-size:10.5px;font-weight:700;color:var(--ink-2)}
+.hm-grid span{width:38px;height:38px;border-radius:12px;background:var(--blue-wash);color:var(--blue);display:grid;place-items:center}
+.hm-sec{display:flex;gap:8px;align-items:center}.hm-sec b{font-size:15px;font-weight:900}
+.hm-sec .new{font-size:10px;font-weight:900;color:#fff;background:#E8590C;border-radius:6px;padding:2px 6px}
+.hm-trip{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--e2);border:1.5px solid #D6E6FB}
+.hm-trip .ph{height:140px;position:relative}
+.hm-trip .ph::after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.hm-trip .cd,.hm-trip .st{position:absolute;top:10px;z-index:1;font-size:11px;font-weight:900;border-radius:999px;padding:4px 9px;display:flex;gap:4px;align-items:center}
+.hm-trip .cd{left:10px;background:#fff;color:var(--ink)}.hm-trip .st{right:10px;background:#1E8A4C;color:#fff}
+.hm-trip .tx{position:absolute;left:12px;bottom:10px;z-index:1;color:#fff;display:grid}.hm-trip .tx b{font-size:19px;font-weight:900}.hm-trip .tx span{font-size:12px;opacity:.9}
+.hm-trip .bd{padding:12px 14px 14px;display:grid;gap:10px}
+.hm-trip .r{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--ink-2)}
+.hm-trip .chips{display:flex;flex-wrap:wrap;gap:6px}
+.hm-trip .chips span{display:flex;gap:4px;align-items:center;font-size:11px;font-weight:700;background:#F2F5F9;border-radius:8px;padding:4px 8px}
+.hm-trip .chips .ms{font-size:14px;color:var(--blue)}
+.hm-trip .acts{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.hm-trip .acts button{border:0;background:var(--blue-wash);color:var(--blue-deep);border-radius:12px;padding:9px 4px;font-weight:700;font-size:12px;display:grid;justify-items:center;gap:2px}
+.hm-mini{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;background:#fff;border-radius:16px;padding:10px 12px;box-shadow:var(--e1)}
+.hm-mini b{font-size:13px;display:block}.hm-mini span{font-size:11px;color:var(--ink-2)}
+.hm-ban{height:90px;border-radius:14px;position:relative;overflow:hidden}
+.hm-ban b{position:absolute;left:12px;bottom:10px;color:#fff;font-size:16px;font-weight:900;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.hm-agent{position:absolute;right:12px;bottom:78px;z-index:6;display:flex;gap:8px;align-items:center}
+.hm-agent .bub{background:#0F1A2E;color:#fff;font-size:12px;line-height:16px;border-radius:14px 14px 4px 14px;padding:8px 10px;max-width:170px;box-shadow:var(--e2)}
+.hm-agent .tap{border-radius:50%;box-shadow:0 8px 24px rgba(15,40,90,.35);display:block}
+.hm-nav{position:absolute;left:0;right:0;bottom:0;background:#fff;display:grid;grid-template-columns:repeat(4,1fr);padding:8px 0 18px;box-shadow:0 -1px 0 #E8ECF1;z-index:5}
+.hm-nav span{display:grid;justify-items:center;gap:2px;font-size:10.5px;font-weight:700;color:var(--ink-3)}
+.hm-nav span.on{color:var(--blue)}
+.hm-scroll{display:flex;flex-direction:column}.hm-scroll>*{flex:none}
+.flow .fits{justify-content:flex-start}.fits span#bftx{flex:1;text-align:left}
+.hm-agent .bub{transition:opacity .4s,transform .4s}.hm-agent .bub.gone{opacity:0;transform:translateX(10px);pointer-events:none}
+/* home header fix */
+.hm-hdsrch{background:#0B2C5F;padding:0 14px 14px;flex:none}
+.hm-scroll{background:#F2F4F7;padding-top:14px}
+/* back to home in planning room */
+.s6-home{flex:none;margin:0 12px 10px;border:0;border-radius:999px;padding:11px;background:#0F1A2E;color:#fff;font-weight:900;font-size:13px;display:flex;gap:6px;justify-content:center;align-items:center}
+.s6-home .ms{flex:none}
+/* side panel Next: moving gradient stroke */
+@property --ga{syntax:'<angle>';inherits:false;initial-value:0deg}
+.nav2 .btn.glow{position:relative;overflow:visible}
+.nav2 .btn.glow::before{content:"";position:absolute;inset:-4px;border-radius:999px;padding:3px;background:conic-gradient(from var(--ga),#3D8EF7,#B9C4FF 25%,#FFA94D 45%,#3D8EF7 60%,#1D4FD8 80%,#3D8EF7);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:gspin 2.2s linear infinite;pointer-events:none}
+.nav2 .btn.glow::after{content:"";position:absolute;inset:-8px;border-radius:999px;box-shadow:0 0 18px rgba(61,142,247,.45);pointer-events:none;animation:gbreath 2.2s ease-in-out infinite}
+@keyframes gspin{to{--ga:360deg}}
+@keyframes gbreath{50%{opacity:.4}}
+/* Next highlight v2: solid stroke + soft pulse, dark reddish orange */
+.nav2 .btn.glow::before{background:none;padding:0;-webkit-mask:none;mask:none;inset:-4px;border:2px solid #C2410C;animation:none}
+.nav2 .btn.glow::after{inset:-4px;box-shadow:0 0 0 0 rgba(194,65,12,.45);animation:npulse 1.8s ease-out infinite;opacity:1}
+@keyframes npulse{0%{box-shadow:0 0 0 0 rgba(194,65,12,.45)}100%{box-shadow:0 0 0 12px rgba(194,65,12,0)}}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute;visibility:hidden" aria-hidden="true"><path id="moSp"/></svg>
 <header class="topbar"><div class="brand"><span class="lg" data-img="logos/mmt-appicon-192"></span><div><b>Group Trip Agent</b><small>MakeMyTrip · concept prototype</small></div></div>
@@ -2115,10 +2179,10 @@ S.acts.q1=b=>{ b.disabled=true; b.closest(".biz").querySelectorAll(".bt").forEac
   agentSays(`<div class="biz in" style="gap:4px"><div class="wb">You're in Mumbai, right? I'll plan your route from there.<span class="meta">12:48</span></div><div class="qr row"><button data-act="q2">Yes, Mumbai</button><button data-act="q2">Another city</button></div></div>`); };
 S.acts.q2=b=>{ pick(b); S.ans.city="Mumbai"; addM(meMsg(b.textContent));
   agentSays(`<div class="biz in" style="gap:4px"><div class="wb">What's a comfortable max for the whole trip? Travel, stay, food, all of it.<span class="meta">12:48</span></div>
-   <div class="flow" id="bflow"><div class="big" id="bval">₹12,500<small>for 4 days, everything</small></div><input type="range" min="8000" max="25000" step="500" value="12500" aria-label="Max budget" data-act="noop" oninput="S.acts.slide(this)"><div class="ticks"><span>₹8k</span><span>₹25k</span></div>
-   <div class="fits" id="bfits">${ic("check_circle","fill")}<span>${fitsText(12500)}</span></div>
+   <div class="flow" id="bflow"><div class="big" id="bval"><span id="bnum">₹12,500</span><small>for 4 days, everything</small></div><input type="range" min="8000" max="25000" step="100" value="12500" aria-label="Max budget" data-act="noop" oninput="S.acts.slide(this)"><div class="ticks"><span>₹8k</span><span>₹25k</span></div>
+   <div class="fits" id="bfits">${ic("check_circle","fill")}<span id="bftx">${fitsText(12500)}</span></div>
    <div class="priv-line">${ic("lock")}Only I see this. The group sees "fits" or "doesn't".</div><button class="send" data-act="q3">Share privately</button></div></div>`); };
-S.acts.slide=r=>{ const v=+r.value; $("#bval",M).firstChild.textContent=fmt(v); $("#bfits span",M).textContent=fitsText(v); S.ans.budget=v; };
+S.acts.slide=r=>{ const v=+r.value; $("#bnum",M).textContent=fmt(v); const t=fitsText(v), f=$("#bftx",M); if(f.textContent!==t) f.textContent=t; S.ans.budget=v; r.style.setProperty("--p",((v-8000)/170)+"%"); };
 S.acts.q3=b=>{ const f=b.closest(".flow"); f.style.opacity=".55"; f.style.pointerEvents="none"; S.ans.budget=S.ans.budget||12500;
   addM(meMsg(`${ic("lock","",'font-size:14px;vertical-align:-2px')} Shared privately`)); updPlanner("meera","Budget in",true);
   agentSays(`<div class="biz in" style="gap:4px"><div class="wb">Most of the group is free <b>Dec 25–28</b>. Does that work for you?<span class="meta">12:49</span></div><div class="qr"><button data-act="q4">Works for me</button><button data-act="q4">I can only leave later</button><button data-act="q4">I'm flexible</button></div></div>`); };
@@ -2689,7 +2753,7 @@ function roomScreen(viewer){
     <div class="s6-map" id="map6-${viewer}">${goaMap(S.r6.pins,ROUTE)}</div>
     <div class="s6-sug" id="sug6-${viewer}"></div>
     <div class="s6-list" id="list6-${viewer}">${itin()}</div>
-   </div></div><div class="urlbar bot"><button class="icon-btn" aria-label="Back">${ic("chevron_left","s18")}</button><div class="u">${ic("lock","",'font-size:13px')}makemytrip.com/plan/goa-dec</div><button class="icon-btn" aria-label="Share">${ic("ios_share","s18")}</button></div></div>`;
+   </div>${viewer==="P"&&S.ans.bookedDone?`<button class="s6-home" data-go="8,1">${ic("home","fill s18")}Back to home</button>`:""}</div><div class="urlbar bot"><button class="icon-btn" aria-label="Back">${ic("chevron_left","s18")}</button><div class="u">${ic("lock","",'font-size:13px')}makemytrip.com/plan/goa-dec</div><button class="icon-btn" aria-label="Share">${ic("ios_share","s18")}</button></div></div>`;
 }
 function refresh6(){ ["P","M"].forEach(w=>{ const root=w==="P"?P:M; const m=$("#map6-"+w,root); if(m){ m.innerHTML=goaMap(S.r6.pins,ROUTE); } const l=$("#list6-"+w,root); if(l){ l.innerHTML=itin(); l.scrollTop=l.scrollHeight; } }); }
 function say6(k,t){ ["P","M"].forEach(w=>{ const root=w==="P"?P:M; const c=$("#cap6-"+w,root); if(c) c.innerHTML=`<span class="in" style="display:flex;gap:6px;align-items:center">${av(k,"xs")}<span><b>${PPL[k].n}:</b> ${t}</span></span>`; $$(".s6-voice .v",root).forEach((v,i)=>v.classList.toggle("talk",ORDER[i]===k)); }); }
@@ -2794,6 +2858,57 @@ S.acts.payCancel=()=>{ $$("#P .dim, #paysh").forEach(e=>e.remove()); };
 S.acts.payAllGo=b=>{ b.disabled=true; b.innerHTML=`<span class="mini-spin" style="border-color:rgba(255,255,255,.4);border-top-color:#fff"></span>Paying…`;
   T(()=>{ BUND.forEach(x=>x[2]="paid"); const sh=$("#paysh",P); sh.innerHTML=`<div class="celebrate">${orb(64,"booked")}<span class="t-hero" style="font-size:20px">Paid in full</span><span class="t-cap">${fmt(bundleTotal())} · all 6 booked. I've told everyone what they owe you.</span></div><button class="btn block" data-go="8,0">See tickets</button>`; hydrate(sh);
     setHTML(M,meeraChat(bizMsg("Your bundle for Goa is ready.")+`<div class="biz in"><div class="paycard"><div class="top2"><small>Aryan paid for everyone</small><b>${fmt(meeraShare())}</b></div><div class="rows"><div class="rw"><span>Your share to settle with Aryan</span><span></span></div></div><button class="bt">${ic("currency_rupee")}Settle with Aryan on UPI</button></div></div>`+bizMsg(`Your seat and cottage are confirmed. ${ic("celebration","",'font-size:15px;vertical-align:-3px;color:#FFD279')}`,"in"))); },1400); };
+/* ---- final: MakeMyTrip home with the group trip + docked agent ---- */
+const iDone=STEPS.findIndex(s=>s.id==="done");
+const bookedP=STEPS[iDone].beats[0].p;
+STEPS[iDone].beats[0].p=()=>bookedP().replace('<button class="btn block" data-go="5,1">Plan the days</button>','<button class="btn block" data-go="8,1">Done</button><button class="btn3" style="justify-self:center" data-go="5,1">Plan the days</button>');
+STEPS[iDone].beats[0].note.cta="Back to home";
+STEPS[iDone].beats[0].run=()=>{ S.ans.bookedDone=true; };
+function homeFinal(){
+  const svc=[["flight","Flights"],["hotel","Hotels"],["cottage","Homestays"],["beach_access","Holidays"],["train","Trains"],["directions_bus","Buses"],["local_taxi","Cabs"],["currency_exchange","Forex"]];
+  return `<div class="hm" style="display:flex;flex-direction:column;height:100%">${sbar("12:10",true)}
+   <div class="hm-top"><span class="lg" data-img="logos/mmt-square"></span><div class="hi"><small>Good afternoon</small><b>Aryan</b></div>${ic("notifications","s22")}</div>
+   <div class="hm-hdsrch"><div class="hm-srch">${ic("search","s18")}Where to next?</div></div>
+   <div class="hm-scroll">
+    <div class="hm-sec"><b>Your group trip</b><span class="new">New</span></div>
+    <div class="hm-trip in"><div class="ph" data-img="places/goa-fontainhas"><span class="cd">${ic("schedule","fill",'font-size:13px')}10 days to go</span><span class="st">${ic("check_circle","fill",'font-size:13px')}Booked</span>
+      <div class="tx"><b>Goa · Dec 25–28</b><span>${GROUP}</span></div></div>
+     <div class="bd"><div class="r">${avs(ORDER,"sm")}<span>6 friends · 6 cities</span></div>
+      <div class="chips"><span>${ic("train")}Jan Shatabdi · 5:25 am</span><span>${ic("cottage")}Palm Grove</span><span>${ic("payments")}6 of 6 paid</span></div>
+      <div class="acts"><button>${ic("confirmation_number")}Tickets</button><button>${ic("map")}Plan days</button><button>${ic("forum")}Group</button></div></div></div>
+    <div class="hm-grid">${svc.map(([i,n])=>`<div><span>${ic(i)}</span>${n}</div>`).join("")}</div>
+    <div class="hm-sec"><b>Start another group trip</b></div>
+    <div class="hm-mini"><span>${orb(30,"idle")}</span><div><b>Plan with friends</b><span>Double-press the side button in any chat</span></div>${ic("chevron_right")}</div>
+    <div class="hm-ban" data-img="places/houseboat-kerala"><b>Winter deals</b></div>
+   </div>
+   <div class="hm-agent in"><div class="bub">Day 2 isn't planned yet. Want to do it now?</div><span class="tap" data-go="5,1">${orb(54,"hello")}</span></div>
+   <div class="hm-nav"><span class="on">${ic("home","fill")}Home</span><span>${ic("luggage")}My trips</span><span>${ic("local_offer")}Offers</span><span>${ic("person")}Account</span></div></div>`;
+}
+STEPS[iDone].beats.push({ note:{h:"Back home, trip and agent ready",p:"The flow ends on MakeMyTrip's home screen. The group trip now lives there, with a countdown, tickets, the day plan and the group, all in one card. The agent stays docked, ready to pick up what's left, like planning Day 2.",tags:[["ag","Agent docked","smart_toy"],["","Trip on home"]]},
+  p:homeFinal, m:()=>STEPS[iDone].beats[0].m(), run(){ S.ans.bookedDone=true; T(()=>{ const bb=$(".hm-agent .bub",P); if(bb) bb.classList.add("gone"); },4500); } });
+
+/* ---- tap cues: soft pulsing circle on the next thing to tap ---- */
+const CUE_SKIP=/^(noop|tick|combo|pcard|mlx|closeEx|payCancel|sideBtn|slide)$/;
+function usable(el){ if(el.closest(".readbar")) return false; if(el.disabled||el.closest(".used")||!el.offsetParent) return false; if(el.dataset.act&&CUE_SKIP.test(el.dataset.act)) return false; const cs=getComputedStyle(el); return cs.pointerEvents!=="none"&&cs.visibility!=="hidden"&&+cs.opacity>.3; }
+function scope(root){ return root.querySelector(".sheet-l,.agsheet,.handoff,.sentnote,.exs")||root; }
+function nextKey(){ const n=beatsOf(STEPS[S.step]).length; return S.beat<n-1?`${S.step},${S.beat+1}`:`${S.step+1},0`; }
+function pickP(root){ const sc=scope(root); const k=nextKey(); const pri=[`[data-go="${k}"]`,`[data-go="${k.replace(/,0$/,"")}"]`,'[data-go="next"]',".foot [data-go]",".foot [data-act]",".rec[data-go],.rec[data-act]",".push[data-go],.push[data-act]","[data-go]","[data-act]"]; for(const s of pri){ const el=[...sc.querySelectorAll(s)].find(usable); if(el) return el; } return null; }
+function pickM(root){ const sc=scope(root); if(sc!==root) return pickP(root); const blocks=[...sc.querySelectorAll(".biz,.wm,.wcar,.push,.lockscr .stack,.agd")].reverse(); for(const b of blocks){ const el=[...b.querySelectorAll("[data-act],[data-go]"),...(b.matches("[data-act],[data-go]")?[b]:[])].find(usable); if(el) return el; } return pickP(root); }
+let cueT, cueT2;
+/* pulse only at choices where just one option has a flow */
+const CUES={"2,0":'#M [data-act="q1"]',"2,3":'#P .foot [data-go="next"]',"3,0":'#M [data-act="vote"][data-d="udaipur"]',"3,2":'#M [data-act="switchGoa"]',"6,0":'#M [data-act="digi"]',"7,2":'#P [data-act="cover"]'};
+const ADV=/^(openAgent|goAhead|nudgeD|cover|payAllGo|hold4)$/;
+function inPhoneAdvance(){ const k=nextKey(), k2=k.replace(/,0$/,""); return [...document.querySelectorAll("#P [data-go],#P [data-act],#M [data-go],#M [data-act]")].some(el=>usable(el)&&((el.dataset.go&&(el.dataset.go===k||el.dataset.go===k2||el.dataset.go==="next"))||(el.dataset.act&&ADV.test(el.dataset.act)))); }
+function placeCue(){
+  $$(".cue").forEach(c=>c.remove()); $$(".cuepos").forEach(e=>e.classList.remove("cuepos"));
+  const sel=CUES[S.step+","+S.beat]; let el=sel?[...document.querySelectorAll(sel)].find(usable):null;
+  if(el){ if(getComputedStyle(el).position==="static") el.classList.add("cuepos"); el.insertAdjacentHTML("beforeend",`<span class="cue" aria-hidden="true"></span>`); }
+  const nb=$('#note [data-nav="next"]'); if(nb) nb.classList.toggle("glow",!el&&!nb.disabled&&!inPhoneAdvance());
+}
+function schedCue(){ clearTimeout(cueT); clearTimeout(cueT2); cueT=setTimeout(placeCue,450); cueT2=setTimeout(placeCue,1600); }
+const cueObs=new MutationObserver(ms=>{ if(ms.every(m=>[...m.addedNodes,...m.removedNodes].every(n=>n.classList&&n.classList.contains("cue")))) return; schedCue(); });
+setTimeout(()=>{ [P,M,document.getElementById("note")].forEach(r=>cueObs.observe(r,{childList:true,subtree:true})); schedCue(); },0);
+document.addEventListener("click",()=>{ $$(".cue").forEach(c=>c.remove()); schedCue(); },true);
 
 P=document.getElementById("P"); M=document.getElementById("M"); paintImg(document); go(0,0);
 </script></body></html>
